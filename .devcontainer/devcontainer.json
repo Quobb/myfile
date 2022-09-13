@@ -1,0 +1,142 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/python-3
+{
+	"name": "Python 3",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": { 
+			// Update 'VARIANT' to pick a Python version: 3, 3.10, 3.9, 3.8, 3.7, 3.6
+			// Append -bullseye or -buster to pin to an OS version.
+			// Use -bullseye variants on local on arm64/Apple Silicon.
+			"VARIANT": "3.10",
+			// Options
+			"NODE_VERSION": "lts/*"
+		}
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+				"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+				"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+				"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+				"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+				"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+				"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+				"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+				"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+				"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
+			},
+			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"abusaidm.html-snippets",
+				"EthanSK.restore-terminals",
+				"njpwerner.autodocstring",
+				"ms-vscode.azure-account",
+				"ms-azuretools.vscode-azureappservice",
+				"ms-azuretools.vscode-azureresourcegroups",
+				"jeff-hykin.better-cpp-syntax",
+				"aaron-bond.better-comments",
+				"Blackboxapp.blackbox",
+				"mitaki28.vscode-clang",
+				"danielpinto8zz6.c-cpp-compile-run",
+				"utsavm9.c-cpp-flag-debugging",
+				"ms-vscode.cpptools-extension-pack",
+				"hars.CppSnippets",
+				"austin.code-gnu-global",
+				"formulahendry.code-runner",
+				"vadimcn.vscode-lldb",
+				"firefox-devtools.vscode-firefox-debug",
+				"thebarkman.vscode-djaneiro",
+				"batisteo.vscode-django",
+				"bigonesystems.django",
+				"MaxChamps.django-commands",
+				"bibhasdn.django-snippets",
+				"bibhasdn.django-html",
+				"ms-azuretools.vscode-docker",
+				"cschlosser.doxdocgen",
+				"dbaeumer.vscode-eslint",
+				"damildrizzy.fastapi-snippets",
+				"CodeYard.flask-snippets",
+				"cstrap.flask-snippets",
+				"thorcc.flask-vgs",
+				"rifi2k.format-html-in-php",
+				"forevolve.git-extensions-for-vs-code",
+				"donjayamanne.githistory",
+				"shyykoserhiy.git-autoconfig",
+				"GitHub.copilot",
+				"GitHub.vscode-pull-request-github",
+				"GitHub.remotehub",
+				"apedroed.Happy-Flasker",
+				"mage1k99.happy-flasker-2",
+				"sidthesloth.html5-boilerplate",
+				"ecmel.vscode-html-css",
+				"mohd-akram.vscode-html-format",
+				"tht13.html-preview-vscode",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"Zignd.html-css-class-completion",
+				"noxiz.jinja-snippets",
+				"WyattFerguson.jinja2-snippet-kit",
+				"lonefy.vscode-JS-CSS-HTML-formatter",
+				"kiteco.kite",
+				"hdg.live-html-previewer",
+				"ritwickdey.LiveServer",
+				"DavidAnson.vscode-markdownlint",
+				"ms-edgedevtools.vscode-edge-devtools",
+				"FallenMax.mithril-emmet",
+				"hoovercj.vscode-power-mode",
+				"esbenp.prettier-vscode",
+				"mohsen1.prettify-json",
+				"davidrockburn.py-pack",
+				"donjayamanne.python-environment-manager",
+				"donjayamanne.python-extension-pack",
+				"tht13.python",
+				"mikeshaker.python-essentials",
+				"dongli.python-preview",
+				"RickyWhite.python-template-snippets",
+				"littlefoxteam.vscode-python-test-adapter",
+				"ms-vscode-remote.remote-wsl",
+				"jmarshal.runcustomfunctions",
+				"rohit-chouhan.sqlite-snippet",
+				"mtxr.sqltools",
+				"McCarter.start-git-bash",
+				"johnstoncode.svn-scm",
+				"TabNine.tabnine-vscode",
+				"ms-vscode.test-adapter-converter",
+				"hbenl.vscode-test-explorer",
+				"shardulm94.trailing-spaces",
+				"vscodevim.vim",
+				"Vue.volar",
+				"WASTeamAccount.WebTemplateStudio-dev-nightly",
+				"DotJoshJohnson.xml",
+				"alefragnani.Bookmarks",
+				"twxs.cmake",
+				"streetsidesoftware.code-spell-checker",
+				"wholroyd.jinja"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"github-cli": "latest"
+	}
+	
+}

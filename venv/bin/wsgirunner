@@ -1,0 +1,8 @@
+#!/home/malware/Desktop/myfile/venv/bin/python3
+"""
+This is wsgirunner command in bin directory, runs wsgirunner.py module in pymodel directory
+"""
+
+import wsgirunner  # find wsgirunner.py anywhere on Python path
+
+wsgirunner.main()

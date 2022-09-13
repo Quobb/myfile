@@ -1,0 +1,8 @@
+#!/home/malware/Desktop/myfile/venv/bin/python3
+"""
+This is pmg command in bin directory, runs pmg.py module in pymodel directory
+"""
+
+import pmg  # find pmg.py anywhere on Python path
+
+pmg.main()
